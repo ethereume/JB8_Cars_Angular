@@ -11,5 +11,14 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
   }
+  public rejest():void {
+
+  }
+  public login():void {
+
+  }
+  public login_name:String = "";
+  public login_pass:String = "";
+  public login_text_heder:String = "Proszę się zalogować lub zarejestrować";
 
 }

@@ -1,0 +1,63 @@
+.main {
+	width:30%;
+	position:absolute;
+	top:50%;
+	left:50%;
+	overflow: hidden;
+	transform:translate(-50%,-50%);
+		.hidden > h2 {
+			color:#fff;
+			letter-spacing:2px;
+			text-transform:uppercase;
+			font-size:1.2rem;
+			text-align:center;
+		}
+		.form-login {
+			input {
+				outline:none;
+				transition: box-shadow .5s ease-in-out;
+				&:focus{
+				border:none;
+				-webkit-box-shadow: 0 0 15px 5px #616161;
+				transition: box-shadow .5s ease-in-out;
+				box-shadow: 0 0 15px 5px #616161;
+				}
+			}
+			div:last-child {
+				display:flex;
+				justify-content:flex-end;
+					button {
+						background:transparent;
+						border-radius:5px;
+						padding:5px 15px;
+						letter-spacing:1px;
+						font-size:1.2rem;
+						cursor:pointer;
+						transition:all .5s ease-in-out;
+					}
+					button:last-child {
+					margin-left:15px;
+					}
+					button:first-child:hover{
+						color:#fff !important;
+						border-color:#fff !important;
+					}
+					button:last-child:hover{
+						color:#fff !important;
+						border-color:#fff !important;
+					}
+				}
+		}
+		.hidden {
+		position:relative;
+		animation: anim 1s ease-in-out;
+		}
+}
+@keyframes anim {
+	0%{
+		top:-208px;
+	}
+	100% {
+		top:0px;
+	}
+}

@@ -8,7 +8,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AppRoutingModule } from "./app-routing/app-routing.module";
 import { LoginComponent } from './components/login/login.component';
 import { CarsComponent } from './components/cars/cars.component';
-
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -21,7 +21,8 @@ import { CarsComponent } from './components/cars/cars.component';
     BrowserAnimationsModule,
     MaterialModule,
     AngularFireAuthModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
