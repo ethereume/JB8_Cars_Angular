@@ -4,10 +4,12 @@
 		<form class="form-login" method="post" action="">
 			<h2 class="mb-3">{{login_text_heder}}</h2>
 			<div class="form-group mb-3">
-				<input class="form-control" type="text" name="login" [(ngModel)]="login_name"  placeholder="Login">
+				<input class="form-control" type="text" name="login" [(ngModel)]="login_name" [ngModelOptions]="{standalone:
+   true}"  placeholder="Login">
 			</div>
 			<div class="form-group mb-3">
-				<input class="form-control" type="password" name="password" [(ngModel)]="login_pass" placeholder="password">
+				<input class="form-control" type="password" name="password" [(ngModel)]="login_pass" [ngModelOptions]="{standalone:
+   true}" placeholder="password">
 			</div>
 			<div class="last-div">
 				<label for="click">
@@ -28,7 +30,7 @@
 				<div class="form-group mb-3">
 					<p>Czy jesteś adminem ?</p>
 					<label>Yes</label>
-					<input type="checkbox"  [(ngModel)]="isAdmin">
+					<input type="checkbox"  [checked]="isAdmin" (change)="isAdmin = !isAdmin">
 					<label>No</label>
 				</div>
 				<div class="last-div">

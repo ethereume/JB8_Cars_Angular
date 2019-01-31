@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {LoginService} from "./login.service";
 
 @Component({
   selector: 'app-login',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private loginS:LoginService) { }
 
   ngOnInit() {
   }
@@ -15,7 +16,16 @@ export class LoginComponent implements OnInit {
 
   }
   public login():void {
-
+  		if(this.login_name.trim() === "" || this.login_pass.trim() === ""){
+  			this.alerts = "Login i hasło nie mogą pyć puste";
+  		} else {
+			this.loginS.getUser({login:this.login_name,password:this.login_pass}).subscribe((dane)=>{
+				console.log(dane);
+  			},(err)=>{
+  				console.log(err);
+  				this.alerts = err.error.error.message;
+  			})
+  		}
   }
   public login_name:String = "";
   public login_pass:String = "";

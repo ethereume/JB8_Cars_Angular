@@ -10,7 +10,7 @@ import { LoginComponent } from './components/login/login.component';
 import { CarsComponent } from './components/cars/cars.component';
 import {FormsModule} from "@angular/forms";
 import { LoginService } from "./components/login/login.service";
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,8 @@ import { LoginService } from "./components/login/login.service";
     MaterialModule,
     AngularFireAuthModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [LoginService],
   bootstrap: [AppComponent]
