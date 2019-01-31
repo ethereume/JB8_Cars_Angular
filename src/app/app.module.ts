@@ -12,6 +12,7 @@ import {FormsModule} from "@angular/forms";
 import { LoginService } from "./components/login/login.service";
 import { HttpClientModule } from '@angular/common/http';
 import {LoginGuard} from "./components/login/login.guard";
+import {ClassesService} from "./classes.service";
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import {LoginGuard} from "./components/login/login.guard";
     FormsModule,
     HttpClientModule
   ],
-  providers: [LoginService,LoginGuard],
+  providers: [LoginService,LoginGuard,ClassesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
