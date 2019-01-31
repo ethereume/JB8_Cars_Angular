@@ -1,13 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { map, take } from 'rxjs/operators'
-/*const httpOptions = {
+const httpOptions = {
   headers: new HttpHeaders({ 
-    'Access-Control-Allow-Origin':'*',
-    'Authorization':'authkey',
-    'userid':'1'
+    'Content-Type':'application/json'
   })
-};*/
+};
 
 @Injectable({
   providedIn: 'root'
@@ -22,8 +20,15 @@ export class LoginService {
   	}));
   }
   addUser(props){
-  	return this.http.post(this.serverUrl,props).pipe(map((dane)=>{
+  	return this.http.post(this.serverUrl,props,httpOptions).pipe(map((dane)=>{
   		return JSON.stringify(dane);
   	}));
   }
+  setLogged(is:boolean){
+    this.isLogged = is;
+  }
+  getLogged(){
+    return this.isLogged;
+  }
+  private isLogged:boolean = false;
 }

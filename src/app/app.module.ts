@@ -11,6 +11,7 @@ import { CarsComponent } from './components/cars/cars.component';
 import {FormsModule} from "@angular/forms";
 import { LoginService } from "./components/login/login.service";
 import { HttpClientModule } from '@angular/common/http';
+import {LoginGuard} from "./components/login/login.guard";
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule
   ],
-  providers: [LoginService],
+  providers: [LoginService,LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

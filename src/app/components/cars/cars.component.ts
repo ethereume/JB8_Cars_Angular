@@ -11,5 +11,5 @@ export class CarsComponent implements OnInit {
 
   ngOnInit() {
   }
-
+public h1_banner:String = "Witaj w wypożyczalni samochodów";
 }
