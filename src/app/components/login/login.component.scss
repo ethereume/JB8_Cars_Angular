@@ -112,6 +112,9 @@
 		#click:checked ~ .rejest-login {
 			display:block;
 		}
+		.error-class {
+		font-size:1.3rem;
+		}
 }
 @keyframes anim {
 	0%{

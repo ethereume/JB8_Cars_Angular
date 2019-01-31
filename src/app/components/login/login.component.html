@@ -29,9 +29,9 @@
 				</div>
 				<div class="form-group mb-3">
 					<p>Czy jesteś adminem ?</p>
-					<label>Yes</label>
-					<input type="checkbox"  [checked]="isAdmin" (change)="isAdmin = !isAdmin">
 					<label>No</label>
+					<input type="checkbox"  [checked]="isAdmin" (change)="isAdmin = !isAdmin">
+					<label>Yes</label>
 				</div>
 				<div class="last-div">
 					<button class="text-success border border-success" (click)="rejest()">Zarejestruj się</button>
@@ -41,6 +41,6 @@
 				</label>
 			</form>
 		</form>
-		<p class="text-danger" style="clear: both;">{{alerts}}</p>
+		<p class="text-danger mt-3 text-center error-class" style="clear: both;">{{alerts}}</p>
 	</div>
 </div>
