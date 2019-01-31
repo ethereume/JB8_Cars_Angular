@@ -19,6 +19,9 @@ export class LoginComponent implements OnInit {
   }
   public login_name:String = "";
   public login_pass:String = "";
+  public isAdmin:Boolean = false;
+  public alerts:String = "Brak błędów";
   public login_text_heder:String = "Proszę się zalogować lub zarejestrować";
+  public rejest_text_heder:String = "Proszę się zarejestrować";
 
 }
