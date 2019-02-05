@@ -1,3 +1,5 @@
+$primary-color: #28a745;
+$secondary-color: #ffc107;
 .main {
 	width:30%;
 	position:absolute;
@@ -80,7 +82,7 @@
 				content:'';
 				width:16px;
 				height:16px;
-				background-color:#28a745;
+				background-color:$primary-color;
 				position:absolute;
 				border-radius:50%;
 				top:-1px;
@@ -123,4 +125,7 @@
 	100% {
 		top:0px;
 	}
+}
+.toast-success-class {
+	background-color:$secondary-color;
 }

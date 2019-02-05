@@ -1,1 +1,6 @@
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+.cars-component {
+	width: 100%;
+	background:linear-gradient(rgba(0,0,0,.9),rgba(0,0,0,.7)), url("./assets/images/rent.jpg") center center no-repeat/cover;
+}

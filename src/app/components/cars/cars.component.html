@@ -1,8 +1,17 @@
 <div class="container">
-	<h2 class="text-center text-white pt-5">{{h1_banner}}</h2>
+	<h2 class="text-center text-white pt-5 mb-3">{{h1_banner}}</h2>
 	<div class="row">
-		<div class="col-12 com-md-4">
-			
+		<div class="col-12 col-md-4 mb-3 mt-3" *ngFor="let car of cars;let i = index">
+			<div class="card">
+			  <img class="card-img-top p-2" src="http://www.hyundai-sim.ru/media/img/service-pages/cars/car-image--ix35.png" alt="Card image cap">
+			  <div class="card-body">
+			    <h5 class="card-title">{{car.name}}</h5>
+			    <p class="card-text">Typ pojazdu: {{car.type}}</p>
+			    <p class="card-text">Koszt wynajmu: {{car.price}} zł</p>
+			    <p class="card-text">Status: <span class="text-danger">nie wynajęty</span></p>
+			    <a href="#" class="btn btn-outline-success float-right">Wynajmij</a>
+			  </div>
+			</div>
 		</div>
 	</div>
 </div>

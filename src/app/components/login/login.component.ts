@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {LoginService} from "./login.service";
 import {Router} from "@angular/router";
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,7 @@ import {Router} from "@angular/router";
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private loginS:LoginService,private route:Router) { }
+  constructor(private loginS:LoginService,private route:Router,private snack:MatSnackBar) { }
 
   ngOnInit() {
   }
@@ -47,6 +48,7 @@ export class LoginComponent implements OnInit {
 				this.alerts = obj.correct+" "+obj.user.name+" zostałeś od razu zalogowany";
 				this.loginS.setLogged(true);
 				this.route.navigate(['/cars']);
+        this.snack.open('Zaostałeś poprawnie zalogowany','',{panelClass:['toast-success-class']});
 			}
   }
   public login_name:String = "";

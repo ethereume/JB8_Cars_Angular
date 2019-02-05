@@ -10,7 +10,6 @@ export class ClassesService {
 
   public classIncection$ = new Subject<any>();
   public addClass(componentName){
-  		console.log("wysylam");
   		this.classIncection$.next(componentName);
   }
 }
