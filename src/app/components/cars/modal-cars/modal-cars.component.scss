@@ -1,0 +1,10 @@
+.modal-dialog-wrapper {
+	.button-wrapper {
+		display: flex;
+	    width: 100%;
+	    justify-content: flex-end;
+	    & button:nth-child(1) {
+	    margin-right:25px;
+	    }
+	}	
+}

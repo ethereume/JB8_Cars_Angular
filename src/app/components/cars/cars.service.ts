@@ -13,4 +13,9 @@ export class CarsService {
   		return dane;
   	}));
   }
+  public getTypesOfCar(){
+  	return this.http.get(this.serverUrl+"types").pipe(map((dane)=>{
+  		return dane;
+  	}));
+  }
 }

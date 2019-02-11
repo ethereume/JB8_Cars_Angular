@@ -8,17 +8,22 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AppRoutingModule } from "./app-routing/app-routing.module";
 import { LoginComponent } from './components/login/login.component';
 import { CarsComponent } from './components/cars/cars.component';
-import {FormsModule} from "@angular/forms";
+import { FormsModule} from "@angular/forms";
 import { LoginService } from "./components/login/login.service";
 import { HttpClientModule } from '@angular/common/http';
-import {LoginGuard} from "./components/login/login.guard";
-import {ClassesService} from "./classes.service";
+import { LoginGuard} from "./components/login/login.guard";
+import { ClassesService} from "./classes.service";
+import { ModalCarsComponent } from './components/cars/modal-cars/modal-cars.component';
+import { ModalFormCarsComponent } from './components/cars/modal-form-cars/modal-form-cars.component';
+import { ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    CarsComponent
+    CarsComponent,
+    ModalCarsComponent,
+    ModalFormCarsComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +32,11 @@ import {ClassesService} from "./classes.service";
     AngularFireAuthModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
+  ],
+  entryComponents:[
+  ModalCarsComponent
   ],
   providers: [LoginService,LoginGuard,ClassesService],
   bootstrap: [AppComponent]

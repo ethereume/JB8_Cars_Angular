@@ -9,7 +9,7 @@
 			    <p class="card-text">Typ pojazdu: {{car.type}}</p>
 			    <p class="card-text">Koszt wynajmu: {{car.price}} zł</p>
 			    <p class="card-text">Status: <span class="text-danger">nie wynajęty</span></p>
-			    <a href="#" class="btn btn-outline-success float-right">Wynajmij</a>
+			    <a href="#" class="btn btn-outline-success float-right" (click)="showMenu($event)">Wynajmij</a>
 			  </div>
 			</div>
 		</div>

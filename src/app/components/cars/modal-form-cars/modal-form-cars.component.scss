@@ -1,0 +1,16 @@
+.form-text-cars:focus,select:focus{
+	box-shadow: none !important;
+	outline: none;
+}
+input[type="number"],input[type="text"] {
+	border-radius: 5px;
+	outline: none;
+	border: 1px solid #c0bebe;
+}
+select {
+	border: 1px solid #c0bebe;
+	border-radius: 5px;
+}
+select,input[type="number"] {
+	padding: .375rem .75rem; 
+}
