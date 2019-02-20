@@ -1,12 +1,21 @@
 <div class="form">
 	<form [formGroup]="getGenetatedForm()">
 			<div class="form-group">
-				<input type="text" formControlName="name" class="form-control form-text-cars" name="cars_name" placeholder="Nazwa samochodu" />
+				<input type="text" formControlName="name" class="form-control form-text-cars" #nameInput name="cars_name" placeholder="Nazwa samochodu" />
+			<mat-error *ngIf="getGenetatedForm().get('name').hasError('required')
+			&& getGenetatedForm().get('name').dirty">Te pole jes wymagane</mat-error>
+			<mat-error *ngIf="getGenetatedForm().get('name').hasError('minlength') 
+			&& getGenetatedForm().get('name').dirty">Te pole jest za krótkie </mat-error>
+			<div>
+				<mat-hint>Znaków {{nameInput.value.length}} / 10</mat-hint>
+			</div>
 			</div>
 			<div class="form-row">
 				<div class="form-group col-12 col-md-6">
 					 <label for="price" class=" col-sm-3 col-12 col-form-label">Cena:</label>
-					 <input min="0" type="number" formControlName="price" name="price" id="price" class="col-12 col-sm-9">	
+					 <input min="0" type="number" formControlName="price" name="price" id="price" class="col-12 col-sm-9">
+			<mat-error *ngIf="getGenetatedForm().get('price').hasError('required')
+				&& getGenetatedForm().get('price').dirty">Te pole jes wymagane</mat-error>	
 				</div>
 				<div class="form-group col-12 col-md-6">
 					<label for="typeOfCar" class="col-sm-6 col-12 col-form-label">Typ samochodu:</label>

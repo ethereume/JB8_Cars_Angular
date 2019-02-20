@@ -16,6 +16,8 @@ import { ClassesService} from "./classes.service";
 import { ModalCarsComponent } from './components/cars/modal-cars/modal-cars.component';
 import { ModalFormCarsComponent } from './components/cars/modal-form-cars/modal-form-cars.component';
 import { ReactiveFormsModule} from "@angular/forms";
+import { ModalRegistrationComponent } from './cars/registration/modal-registration/modal-registration.component';
+import { ModalRegistrationFormComponent } from './components/cars/registration/modal-registration-form/modal-registration-form.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { ReactiveFormsModule} from "@angular/forms";
     LoginComponent,
     CarsComponent,
     ModalCarsComponent,
-    ModalFormCarsComponent
+    ModalFormCarsComponent,
+    ModalRegistrationComponent,
+    ModalRegistrationFormComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +40,8 @@ import { ReactiveFormsModule} from "@angular/forms";
     ReactiveFormsModule
   ],
   entryComponents:[
-  ModalCarsComponent
+  ModalCarsComponent,
+  ModalRegistrationComponent
   ],
   providers: [LoginService,LoginGuard,ClassesService],
   bootstrap: [AppComponent]
