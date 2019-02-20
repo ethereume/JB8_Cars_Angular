@@ -10,6 +10,9 @@ export class ModalRegistrationFormComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
+
+public data:Date = null;
 
 }

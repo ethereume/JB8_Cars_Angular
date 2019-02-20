@@ -10,3 +10,22 @@
 .card:hover {
 	transform: scale(1.1);
 }
+.button-plus {
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	right: 10%;
+	top:80%;
+	background:transparent;
+	border: 1px solid #28a745;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	.plus-button {
+		font-size: 1.2rem;
+		color: #fff;
+		padding: 0px 0px 3px 0px;
+	}
+}

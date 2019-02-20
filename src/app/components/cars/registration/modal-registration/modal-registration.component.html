@@ -1,3 +1,17 @@
-<p>
-  modal-registration works!
-</p>
+<div class="modal-dialog-wrapper">
+	<h2 mat-dialog-title>{{title}}</h2>
+	<mat-dialog-content>
+		<app-modal-registration-form #registrationForm ></app-modal-registration-form>
+	</mat-dialog-content>
+		<mat-dialog-actions>
+		<div class="button-wrapper">
+			<button mat-raised-buttom 
+			[disabled]="modal.data == null"
+			class="btn btn-outline-primary">Ok</button>
+			<button 
+			mat-raised-buttom 
+			mat-dialog-close 
+			class="btn btn-outline-danger">Anuluj</button>
+		</div>
+	</mat-dialog-actions>
+</div>

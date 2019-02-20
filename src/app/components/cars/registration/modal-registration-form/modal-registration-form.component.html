@@ -1,3 +1,7 @@
-<p>
-  modal-registration-form works!
-</p>
+<form>
+	<mat-form-field>
+		<input matInput type="date" name="date" placeholder="Proszę podać datę wynajmu" 
+		[ngModel]="data | date:'yyyy-MM-dd'"  
+        (ngModelChange)="data = $event">
+	</mat-form-field>
+</form> 

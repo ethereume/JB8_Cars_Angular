@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ClassesService} from "../../classes.service";
 import { CarsService } from "./cars.service";
 import {ModalCarsComponent} from "./modal-cars/modal-cars.component";
+import {ModalRegistrationComponent} from "./registration/modal-registration/modal-registration.component";
 import {MatDialog} from "@angular/material";
 
 @Component({
@@ -24,6 +25,9 @@ export class CarsComponent implements OnInit {
   }
   public showMenu(e){
     e.preventDefault();
+    this.dialog.open(ModalRegistrationComponent);
+  }
+  public showMenuForAdd(){
     this.dialog.open(ModalCarsComponent);
   }
 public cars;
