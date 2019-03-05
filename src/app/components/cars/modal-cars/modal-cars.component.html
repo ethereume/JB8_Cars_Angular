@@ -1,12 +1,19 @@
 <div class="modal-dialog-wrapper">
-	<h2 mat-dialog-title>Dodaj auto</h2>
+	<h2 mat-dialog-title>Dodaj auto </h2>
 	<mat-dialog-content>
-		<app-modal-form-cars #FormComponen></app-modal-form-cars>
+		<div>
+		<p [hidden]="!error" class="col-12 text-danger">Błąd w połączeniu z bazą danych</p>
+		<app-modal-form-cars 
+			[hidden]="error" 
+			(outputMesse)="handleError($event)" 
+			#FormComponen>	
+		</app-modal-form-cars>
+		</div>
 	</mat-dialog-content>
 	<mat-dialog-actions>
 		<div class="button-wrapper">
 			<button mat-raised-buttom 
-			[disabled]="formModalComponen.getGenetatedForm().invalid"
+			[disabled]="error || formModalComponen.getGenetatedForm().invalid"
 			class="btn btn-outline-primary">Dodaj auto</button>
 			<button 
 			mat-raised-buttom 

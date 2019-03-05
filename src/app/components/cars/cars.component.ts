@@ -30,6 +30,6 @@ export class CarsComponent implements OnInit {
   public showMenuForAdd(){
     this.dialog.open(ModalCarsComponent);
   }
-public cars;
+public cars = [];
 public h1_banner:String = "Witaj w wypożyczalni samochodów";
 }
