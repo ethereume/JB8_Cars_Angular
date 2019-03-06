@@ -16,11 +16,13 @@ export class LoginService {
 
   getUser(props) {
   	return this.http.get(`${this.serverUrl}?login=${props.login}&password=${props.password}`).pipe(map((dane)=>{
-  		return JSON.stringify(dane);
+  		this.user = dane;
+      return JSON.stringify(dane);
   	}));
   }
   addUser(props){
   	return this.http.post(this.serverUrl,props,httpOptions).pipe(map((dane)=>{
+      this.user = dane;
   		return JSON.stringify(dane);
   	}));
   }
@@ -30,5 +32,9 @@ export class LoginService {
   getLogged(){
     return this.isLogged;
   }
+  get getUserName(){
+    return this.user;
+  }
+  private user:any = "";
   private isLogged:boolean = false;
 }

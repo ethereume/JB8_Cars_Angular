@@ -10,7 +10,10 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private loginS:LoginService,private route:Router,private snack:MatSnackBar) { }
+  constructor(
+    private loginS:LoginService,
+    private route:Router,
+    private snack:MatSnackBar) { }
 
   ngOnInit() {
   }
@@ -21,7 +24,6 @@ export class LoginComponent implements OnInit {
   		this.loginS.addUser({name:this.login_name,password:this.login_pass,admin:this.isAdmin}).subscribe((dane)=>{
 			this.parser(dane);
 	  	},(err)=>{
-	  		console.log(err);
 			this.alerts = err.error.message;
 	  	});
   	}

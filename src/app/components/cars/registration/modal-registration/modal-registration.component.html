@@ -2,12 +2,18 @@
 	<h2 mat-dialog-title>{{title}}</h2>
 	<mat-dialog-content>
 		<app-modal-registration-form #registrationForm ></app-modal-registration-form>
+		<mat-error>{{error}}</mat-error>
+		<!-- 		<mat-form-field>
+			<input matInput type="time" atp-time-picker [(ngModel)]="data">
+			[mat-dialog-close]="data"
+		</mat-form-field> -->
 	</mat-dialog-content>
 		<mat-dialog-actions>
 		<div class="button-wrapper">
 			<button mat-raised-buttom 
 			[disabled]="modal.data == null"
-			class="btn btn-outline-primary">Ok</button>
+			(click)="checkIfDateIsCorrect()"
+			class="btn btn-outline-primary">Wynajmij</button>
 			<button 
 			mat-raised-buttom 
 			mat-dialog-close 
