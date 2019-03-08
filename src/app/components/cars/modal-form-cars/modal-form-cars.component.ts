@@ -29,9 +29,9 @@ export class ModalFormCarsComponent implements OnInit {
   	this.form = this.formBuilder.group({
   		price:[0,{validators:[Validators.required]}],
   		name:['',{validators:[Validators.required,Validators.minLength(10)]}],
-  		type:['',{validators:[Validators.required]}]
+  		typeOfCar:['',{validators:[Validators.required]}]
   	});
-  	this.form.controls['type'].setValue("Osobowe", {onlySelf: true});
+  	this.form.controls['typeOfCar'].setValue("Osobowe", {onlySelf: true});
   }
   getGenetatedForm(){
   	return this.form;

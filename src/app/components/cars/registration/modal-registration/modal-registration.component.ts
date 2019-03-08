@@ -20,8 +20,8 @@ export class ModalRegistrationComponent implements OnInit {
   	if(czyPo){
   		this.error = "Wybrana data jest nieaktualna, wypożycz przynajmniej na jeden dzień";
   	} else {
-  		this.dialogRef.close(this.modal.data);
   		this.error = "";
+  		this.dialogRef.close(this.modal.data);
   	}
   }
 public title:string = "Proszę podać datę wynajmu";

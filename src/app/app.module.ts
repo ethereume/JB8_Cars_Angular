@@ -16,6 +16,7 @@ import { ModalCarsComponent } from './components/cars/modal-cars/modal-cars.comp
 import { ModalFormCarsComponent } from './components/cars/modal-form-cars/modal-form-cars.component';
 import { ModalRegistrationComponent} from "./components/cars/registration/modal-registration/modal-registration.component";
 import { ModalRegistrationFormComponent } from './components/cars/registration/modal-registration-form/modal-registration-form.component';
+import { SingleCarComponent } from './components/cars/single-car/single-car.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ModalRegistrationFormComponent } from './components/cars/registration/m
     ModalCarsComponent,
     ModalFormCarsComponent,
     ModalRegistrationComponent,
-    ModalRegistrationFormComponent
+    ModalRegistrationFormComponent,
+    SingleCarComponent
   ],
   imports: [
     BrowserModule,

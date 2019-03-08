@@ -1,18 +1,6 @@
 .container-fluid {
 	background: rgba(69,74,76,.6);
 }
-.card {
-	background: transparent;
-	color:#fff;
-	cursor: pointer;
-	letter-spacing: 2px;
-	border: none;
-	outline: none;
-	transition: all .4s ease-in-out;;
-}
-.card:hover {
-	transform: scale(1.1);
-}
 .button-plus {
 	width: 40px;
 	height: 40px;

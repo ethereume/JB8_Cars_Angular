@@ -1,0 +1,16 @@
+<div class="card">
+	  <img class="card-img-top p-2" src="http://www.hyundai-sim.ru/media/img/service-pages/cars/car-image--ix35.png" alt="Card image cap">
+	<div class="card-body">
+	    <h5 class="card-title">{{car.name}}</h5>
+	    <p class="card-text">Typ pojazdu: {{car.type}}</p>
+	    <p class="card-text">Koszt wynajmu: {{car.price}} zł</p>
+	    <p class="card-text">
+	Status: 
+	<span 
+	[ngClass]="{'text-danger':!car.isRent,'text-success':car.isRent}">
+	{{status}}
+    </span>
+	    </p>
+	    <a href="#" [hidden]="car.isRent" class="btn btn-outline-success float-right" (click)="showMenu(id,$event)">Wynajmij</a>
+	</div>
+</div>

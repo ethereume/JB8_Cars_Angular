@@ -1,0 +1,12 @@
+.card {
+	background: transparent;
+	color:#fff;
+	cursor: pointer;
+	letter-spacing: 2px;
+	border: none;
+	outline: none;
+	transition: all .4s ease-in-out;;
+}
+.card:hover {
+	transform: scale(1.1);
+}

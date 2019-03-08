@@ -14,7 +14,7 @@
 		<div class="button-wrapper">
 			<button mat-raised-buttom 
 			[disabled]="error || formModalComponen.getGenetatedForm().invalid"
-			class="btn btn-outline-primary">Dodaj auto</button>
+			class="btn btn-outline-primary" (click)="addCar()">Dodaj auto</button>
 			<button 
 			mat-raised-buttom 
 			mat-dialog-close 

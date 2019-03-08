@@ -18,4 +18,11 @@ export class CarsService {
   		return dane;
   	}));
   }
+  public addCar(car:any){
+    return this.http.post(this.serverUrl,car);
+  }
+  public updateDate(id,date){
+    console.log({date});
+    return this.http.post(`${this.serverUrl}data/${id}`,{data:date});
+  }
 }

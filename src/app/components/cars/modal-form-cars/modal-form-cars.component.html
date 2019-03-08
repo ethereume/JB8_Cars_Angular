@@ -19,7 +19,7 @@
 				</div>
 				<div class="form-group col-12 col-md-6">
 					<label for="typeOfCar" class="col-sm-6 col-12 col-form-label">Typ samochodu:</label>
-					<select formControlName="type" id="typeOfCar" class="col-12 col-sm-6">
+					<select formControlName="typeOfCar" id="typeOfCar" class="col-12 col-sm-6">
 						<option *ngFor="let option of options;let i = index"
 						[ngValue]="option">{{option}}</option>
 					</select>
