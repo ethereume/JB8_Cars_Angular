@@ -9,9 +9,7 @@ export class CarsService {
   constructor(private http:HttpClient) { }
 
   public getCars(){
-  	return this.http.get(this.serverUrl).pipe(map((dane)=>{
-  		return dane;
-  	}));
+  	return this.http.get(this.serverUrl);
   }
   public getTypesOfCar(){
   	return this.http.get(this.serverUrl+"types").pipe(map((dane)=>{
@@ -19,10 +17,16 @@ export class CarsService {
   	}));
   }
   public addCar(car:any){
+    console.log(car);
     return this.http.post(this.serverUrl,car);
   }
   public updateDate(id,date){
-    console.log({date});
-    return this.http.post(`${this.serverUrl}data/${id}`,{data:date});
+    return this.http.put(`${this.serverUrl}data/${id}`,{data:date});
+  }
+  public getCar(id) {
+      return this.http.post(`${this.serverUrl}car/${id}`,{id});
+  }
+  public deleteCar(id) {
+    return this.http.delete(`${this.serverUrl}/${id}`);
   }
 }

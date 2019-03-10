@@ -18,8 +18,8 @@
 	<div class="row">
 		<p>{{cars.length}}</p>
 		<div class="wrapper-for-cars" *ngIf="cars.length > 0;else emptyCars">
-			<div class="col-12 col-md-4 mb-3 mt-3" *ngFor="let car of cars;let i = index">
-				<app-single-car [id]="i" [car]="car" (event)="showMenu($event)"></app-single-car>
+			<div class="col-12 col-md-4 mb-3 mt-3" *ngFor="let car of cars;">
+				<app-single-car [car]="car" (deleted)="deleted()" (event)="showMenu($event)"></app-single-car>
 			</div>
 		</div>
 		<ng-template #emptyCars>

@@ -1,4 +1,4 @@
-import { Component, OnInit,ViewChildren,QueryList,AfterViewInit } from '@angular/core';
+﻿import { Component, OnInit,ViewChildren,QueryList,AfterViewInit } from '@angular/core';
 import { ClassesService} from "../../classes.service";
 import { CarsService } from "./cars.service";
 import { ModalCarsComponent} from "./modal-cars/modal-cars.component";
@@ -25,15 +25,16 @@ export class CarsComponent implements OnInit {
 
   ngOnInit() {
   	this.subject.addClass('cars-component');
-    //this.user = this.loginS.getUserName.user.name; // nie usuwać !!
+    this.user = this.loginS.getUserName.user.name;
   	this.getCars();
   }
   public showMenu(id){
+    console.log(id);
     this.dialog.open(ModalRegistrationComponent,{data:""}).afterClosed().subscribe((dane)=>{
           if(dane){
             this.carServices.updateDate(id,dane).subscribe((dane)=>{
                 this.listCars.map((object)=>{
-                  if(id-1 === object.id) {
+                  if(id === object.car.id) {
                     object.status = "wynajęty";
                     object.car.isRent = true;
                   }
@@ -41,6 +42,9 @@ export class CarsComponent implements OnInit {
             });
         }
     });
+  }
+  public deleted(){
+      this.getCars();
   }
   public showMenuForAdd(){
     this.dialog.open(ModalCarsComponent).afterClosed().subscribe((correct)=>{
@@ -56,7 +60,7 @@ export class CarsComponent implements OnInit {
   }
   private getCars(){
     this.carServices.getCars().subscribe((dane:any)=>{
-        this.cars = JSON.parse(dane.cars);
+        this.cars = dane;
       });
   }
 public cars = [];

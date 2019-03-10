@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card" (click)="edit(car.id)">
 	  <img class="card-img-top p-2" src="http://www.hyundai-sim.ru/media/img/service-pages/cars/car-image--ix35.png" alt="Card image cap">
 	<div class="card-body">
 	    <h5 class="card-title">{{car.name}}</h5>
@@ -11,6 +11,10 @@
 	{{status}}
     </span>
 	    </p>
-	    <a href="#" [hidden]="car.isRent" class="btn btn-outline-success float-right" (click)="showMenu(id,$event)">Wynajmij</a>
+	</div>
+	<div>
+	<a href="#" [hidden]="car.isRent" 
+		class="btn btn-outline-success float-right ml-3" (click)="showMenu(car.id,$event)">Wynajmij</a>
+		<a href="#" class="btn btn-outline-warning float-right" (click)="usun(car.id,$event)">Usuń</a>
 	</div>
 </div>
